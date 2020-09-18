@@ -9,8 +9,8 @@ jobs:
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          nvidia-smi > report.md
-          echo " Hi, I am from self-hosted GPU!" >> eport.md
+
+          echo " Hi, I am from self-hosted GPU!" > report.md
 
           # Write your CML report
           cml-send-comment report.md
