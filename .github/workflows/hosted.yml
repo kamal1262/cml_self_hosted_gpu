@@ -1,0 +1,16 @@
+name: your-workflow-name
+on: [push]
+jobs:
+  run:
+    runs-on: [self-hosted, cml,gpu]
+    steps:
+      - uses: actions/checkout@v2
+      - name: cml_run
+        env:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          nvidia-smi > report.md
+          echo " Hi, I am from self-hosted GPU!" >> eport.md
+
+          # Write your CML report
+          cml-send-comment report.md
