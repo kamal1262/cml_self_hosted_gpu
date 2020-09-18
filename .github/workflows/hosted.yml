@@ -1,8 +1,8 @@
-name: your-workflow-name
+name: train-model
 on: [push]
 jobs:
   run:
-    runs-on: [self-hosted, cml,gpu]
+    runs-on: [self-hosted, Linux,X64]
     steps:
       - uses: actions/checkout@v2
       - name: cml_run
