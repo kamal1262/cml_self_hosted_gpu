@@ -13,4 +13,3 @@ jobs:
           echo " Hi, I am from self-hosted GPU!" > report.md
 
           # Write your CML report
-          cml-send-comment report.md
